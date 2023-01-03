@@ -1,17 +1,17 @@
 const Express = require('express');
-const home = require('../controller/homeController');
+const Homecontroler = require('../controller/homeController');
 let router = Express.Router();
 
 const initWebRoute = (app) => {
-    router.get('/', home.getHomepage)
+    router.get('/', Homecontroler.getHomepage)
 
-    router.get('/home', home.getHomepage)
+    router.get('/home', Homecontroler.getHomepage)
 
-    router.get('/link/:slug', home.getLinkslugpage)  //trang con
-    router.get('/link', home.getLinkpage)
+    router.get('/link/:slug', Homecontroler.getinkslugpage)  //trang con
+    router.get('/link', Homecontroler.getLinkpage)
 
-    router.get('/search', home.getSearchpage)
-    router.post('/search', home.postSearchpage)
+    router.get('/search', Homecontroler.getSearchpage)
+    router.post('/search', Homecontroler.postSearchpage)
     return app.use('/', router)
 
 }
