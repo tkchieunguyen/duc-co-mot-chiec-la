@@ -7,6 +7,7 @@ const { dirname } = require('path');
 const app = express();
 const initWebRoute = require('./route/route');
 require(`dotenv`).config();
+const sql = require('./connectDB');
 const port = process.env.port || 3000;
 
 //template engine
@@ -27,3 +28,4 @@ initWebRoute(app); //route.js
 app.listen(port, () => {
     console.log(`server dang chay tai http://localhost:${port}`)
 });
+

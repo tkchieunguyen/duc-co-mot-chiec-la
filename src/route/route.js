@@ -7,7 +7,7 @@ const initWebRoute = (app) => {
 
     router.get('/home', Homecontroler.getHomepage)
 
-    router.get('/link/:slug', Homecontroler.getinkslugpage)  //trang con
+    router.get('/link/:slug', Homecontroler.getLinkslugpage)  //trang con
     router.get('/link', Homecontroler.getLinkpage)
 
     router.get('/search', Homecontroler.getSearchpage)
